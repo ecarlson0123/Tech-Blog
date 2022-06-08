@@ -30,6 +30,7 @@ a {
 
 a:hover {
   color: var(--secondary);
+  background-color: var(--primary);
 }
 
 button {
@@ -45,6 +46,11 @@ button {
 
 button:hover {
   background-color: #3f3001;
+}
+
+nav > button:hover {
+  background-color: var(--primary);
+  color: var(--secondary);
 }
 
 .post-list {
@@ -79,6 +85,11 @@ textarea, input {
 textarea:focus, input:focus {
   outline: none;
   border: 1px solid var(--secondary);
+}
+
+#create {
+  width: 20%;
+  margin-bottom: 10px;
 }
 
 textarea {
@@ -131,7 +142,7 @@ nav {
 }
 
 nav > a {
-  padding: 0 0 0 16px;
+  margin: 0 0 0 16px;
 }
 
 main {
@@ -153,10 +164,7 @@ main {
   margin-left: 16px;
 }
 
-.btn-no-style:hover {
-  background: none;
-  color: #4b3702;
-}
+
 
 .delete-post-btn {
   background-color: #d41414;
@@ -169,14 +177,37 @@ main {
 .post {
   margin-bottom: 2%;
   line-height: 150%;
-  border: 3px solid var(--secondary);
+  border: 5px solid var(--secondary);
 }
 
 .edit-link {
   display: block;
   margin: -1.5% 0 2% 0;
+  color: var(--secondary)
 }
 
+.new-post-holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border: solid 5px var(--secondary);
+}
+
+.new-post-holder > h2 {
+  background-color: var(--secondary);
+  color: var(--primary);
+  width:100%;
+  height: 100%;
+  margin-top: 0;
+  padding: 15px 0 15px 0;
+  text-align: center;
+}
+
+.edit-link:hover{
+  color: var(--primary);
+  background-color: var(--secondary)
+}
 
 .comment-form {
   margin-bottom: 5%;
@@ -185,7 +216,7 @@ main {
 .comment {
   padding: 1%;
   margin-bottom: 1%;
-  border-bottom: 3px solid var(--secondary);
+  border-bottom: 5px solid var(--secondary);
 }
 
 
@@ -199,8 +230,35 @@ main {
   color: var(--secondary);
 }
 
+.new-post-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.new-post-form > div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.new-post-form > div > label{
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+}
+
 .new-post-form input {
-  width: 300px;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#content {
+ height: 15vh
 }
 
 .edit-post-form {
